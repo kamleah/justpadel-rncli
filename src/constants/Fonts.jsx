@@ -1,0 +1,10 @@
+export const LatoBlack = 'Lato-Black';
+export const LatoBlackItalic = 'Lato-BlackItalic';
+export const LatoBold = 'Lato-Bold';
+export const LatoBoldItalic = 'Lato-BoldItalic';
+export const LatoItalic = 'Lato-Italic';
+export const LatoLight = 'Lato-Light';
+export const LatoLightItalic = 'Lato-LightItalic';
+export const LatoThin = 'Lato-Thin';
+export const LatoRegular = 'Lato-Regular';
+export const LatoThinItalic = 'Lato-ThinItalic';

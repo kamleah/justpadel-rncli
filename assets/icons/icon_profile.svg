@@ -1,0 +1,12 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23" width="23" height="23">
+	<title>Meet Discover</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #b5b5b5 } 
+	</style>
+	<g id="Meet Discover">
+		<g id="Group 553">
+			<path id="icons8-user" class="shp0" d="M11 0C8.3 0 6.11 2.19 6.11 4.89C6.11 7.59 8.3 9.78 11 9.78C13.7 9.78 15.89 7.59 15.89 4.89C15.89 2.19 13.7 0 11 0L11 0ZM11 13.44C7.33 13.44 0 15.29 0 18.94L0 20.78C0 21.45 0.55 22 1.22 22L20.78 22C21.45 22 22 21.45 22 20.78L22 18.94C22 15.29 14.67 13.44 11 13.44Z" />
+		</g>
+	</g>
+</svg>
