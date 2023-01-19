@@ -8,6 +8,7 @@ import {useSelector} from 'react-redux';
 import BottomTab from '../../routes/BottomTab/BottomTab';
 import SignIn from '../SignIn/SignIn';
 import SignUp from '../SignUp/SignUp';
+import EntryScreen from '../EntryScreen/EntryScreen';
 
 const Drawer = createDrawerNavigator();
 const Stack = createNativeStackNavigator();
@@ -37,6 +38,7 @@ const Splash = () => {
             </Drawer.Navigator>
           ) : (
             <Stack.Navigator screenOptions={{headerShown: false}}>
+              <Stack.Screen name="entryscreen" component={EntryScreen} />  
               <Stack.Screen name="signin" component={SignIn} />
               <Stack.Screen name="signup" component={SignUp} />
             </Stack.Navigator>

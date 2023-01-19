@@ -1,7 +1,7 @@
 import {SET_COUPONS} from '../Types/LoginTypes';
 
 const initialState = {
-  logged: true,
+  logged: false,
   userData: undefined,
   mainCourtLists: undefined,
   allMainCourtLists: undefined,

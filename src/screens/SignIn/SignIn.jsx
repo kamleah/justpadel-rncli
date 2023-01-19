@@ -1,12 +1,13 @@
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import React from 'react';
-
+import {black, mainColor} from '../../constants/Colors';
+import {TextInput} from 'react-native-paper';
+import { SafeAreaView } from 'react-native-safe-area-context';
 const SignIn = ({navigation}) => {
   return (
-    <View>
-      <Text>SignIn</Text>
-      <TouchableOpacity onPress={()=>navigation.navigate("signup")}><Text>Clikc To Redirect Sign Up</Text></TouchableOpacity>
-    </View>
+    <SafeAreaView>
+      <View></View>
+    </SafeAreaView>
   );
 };
 
