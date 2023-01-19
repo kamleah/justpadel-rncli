@@ -1,28 +1,30 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
+import {Image} from 'react-native';
 import BottomTab from './src/routes/BottomTab/BottomTab';
 import {NavigationContainer} from '@react-navigation/native';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import SignIn from './src/screens/SignIn/SignIn';
 import SignUp from './src/screens/SignUp/SignUp';
+import {Height, Width} from './src/constants/FontSizes';
+// ---
+import {Provider} from 'react-redux';
+import store, {persistor} from './src/redux/store';
+import {PersistGate} from 'redux-persist/integration/react';
+import Splash from './src/screens/Splash/Splash';
 
 const Drawer = createDrawerNavigator();
 const Stack = createNativeStackNavigator();
 
 const App = () => {
-  const [logged, setLogged] = useState(true);
+
   return (
     <NavigationContainer>
-      {logged ? (
-        <Drawer.Navigator screenOptions={{headerShown: false}}>
-          <Drawer.Screen name="JustPadelBottomTab" component={BottomTab} />
-        </Drawer.Navigator>
-      ) : (
-        <Stack.Navigator screenOptions={{headerShown: false}}>
-          <Stack.Screen name="signin" component={SignIn} />
-          <Stack.Screen name="signup" component={SignUp} />
-        </Stack.Navigator>
-      )}
+      <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+          <Splash />
+        </PersistGate>
+      </Provider>
     </NavigationContainer>
   );
 };

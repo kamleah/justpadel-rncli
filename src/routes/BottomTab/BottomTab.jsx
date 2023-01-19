@@ -1,10 +1,7 @@
 import React from 'react';
 import {View, Text} from 'react-native';
-import {mainColor} from '../../constants/Colors';
+import {mainColor, tabIconNormal} from '../../constants/Colors';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import EntypoIcons from 'react-native-vector-icons/Entypo';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 
 import HomeStackScreen from '../StackScreens/HomeStackScreen/HomeStackScreen';
@@ -13,22 +10,27 @@ import CommunityStackScreen from '../StackScreens/CommunityStackScreen/Community
 import ChatStackScreen from '../StackScreens/ChatStackScreen/ChatStackScreen';
 import ProfileStackScreen from '../StackScreens/ProfileStackScreen/ProfileStackScreen';
 
-import SVGIconHome from '../../../assets/icons/icon_home.svg';
-import SVGIconHomeActive from '../../../assets/icons/icon_home.svg';
+import HOMEICON from '../../../assets/icons/icon_home.svg';
+import HOMEICONACTIVE from '../../../assets/icons/icon_home_active.svg';
+import BOOKING_ICON from '../../../assets/icons/icon_booking.svg';
+import BOOKING_ICON_ACTIVE from '../../../assets/icons/icon_booking_active.svg';
+import PADELGRAM_ICON from '../../../assets/icons/icon_padelgram.svg';
+import PADELGRAM_ICON_ACTIVE from '../../../assets/icons/icon_padelgram_active.svg';
+import PROFILE_ICON from '../../../assets/icons/icon_profile.svg';
+import PROFILE_ICON_ACTIVE from '../../../assets/icons/icon_profile_active.svg';
 
 const Tab = createBottomTabNavigator();
 
 const BottomTab = () => {
   return (
     <Tab.Navigator
+      initialRouteName="courtdetail"
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: false,
         tabBarStyle: {
           position: 'absolute',
-          paddingTop: 10,
           height: 60,
-          bottom: 0,
         },
       }}>
       <Tab.Screen
@@ -36,11 +38,14 @@ const BottomTab = () => {
         component={HomeStackScreen}
         enableScreens={false}
         options={{
+          tabBarStyle: {
+            height: 60,
+          },
           tabBarIcon: ({focused}) => (
-            <View style={{alignItems: 'center'}}>
-              <EntypoIcons name="home" size={25} color={focused && mainColor} />
-              <Text style={{marginTop: 5}}>Home</Text>
-            </View>
+            <>
+              {focused ? <HOMEICONACTIVE /> : <HOMEICON />}
+              <Text style={{marginTop: 5, color: 'black'}}>Home</Text>
+            </>
           ),
         }}
       />
@@ -49,15 +54,14 @@ const BottomTab = () => {
         name="Book"
         component={BookStackScreen}
         options={{
+          tabBarStyle: {
+            height: 60,
+          },
           tabBarIcon: ({focused}) => (
-            <View style={{alignItems: 'center'}}>
-              <MaterialCommunityIcons
-                name="book-settings"
-                size={25}
-                color={focused && mainColor}
-              />
-              <Text style={{marginTop: 5}}>Book</Text>
-            </View>
+            <>
+              {focused ? <BOOKING_ICON_ACTIVE /> : <BOOKING_ICON />}
+              <Text style={{marginTop: 5, color: 'black'}}>Book</Text>
+            </>
           ),
         }}
       />
@@ -66,15 +70,14 @@ const BottomTab = () => {
         name="Community"
         component={CommunityStackScreen}
         options={{
+          tabBarStyle: {
+            height: 60,
+          },
           tabBarIcon: ({focused}) => (
-            <View style={{alignItems: 'center'}}>
-              <Ionicons
-                name="md-tennisball"
-                size={25}
-                color={focused && mainColor}
-              />
-              <Text style={{marginTop: 5}}>Community</Text>
-            </View>
+            <>
+              {focused ? <PADELGRAM_ICON_ACTIVE /> : <PADELGRAM_ICON />}
+              <Text style={{marginTop: 5, color: 'black'}}>Community</Text>
+            </>
           ),
         }}
       />
@@ -83,10 +86,17 @@ const BottomTab = () => {
         name="Chat"
         component={ChatStackScreen}
         options={{
+          tabBarStyle: {
+            height: 60,
+          },
           tabBarIcon: ({focused}) => (
             <View style={{alignItems: 'center'}}>
-              <Fontisto name="hipchat" size={25} color={focused && mainColor} />
-              <Text style={{marginTop: 5}}>Chat</Text>
+              <Fontisto
+                name="hipchat"
+                size={25}
+                color={focused ? mainColor : tabIconNormal}
+              />
+              <Text style={{marginTop: 5, color: 'black'}}>Chat</Text>
             </View>
           ),
         }}
@@ -96,11 +106,14 @@ const BottomTab = () => {
         name="Profile"
         component={ProfileStackScreen}
         options={{
+          tabBarStyle: {
+            height: 60,
+          },
           tabBarIcon: ({focused}) => (
-            <View style={{alignItems: 'center'}}>
-              <Ionicons name="person" size={25} color={focused && mainColor} />
-              <Text style={{marginTop: 5}}>Profile</Text>
-            </View>
+            <>
+              {focused ? <PROFILE_ICON_ACTIVE /> : <PROFILE_ICON />}
+              <Text style={{marginTop: 5, color: 'black'}}>Profile</Text>
+            </>
           ),
         }}
       />

@@ -1,14 +1,84 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import {StyleSheet, Text, View} from 'react-native';
+import React from 'react';
+import Header from '../../../components/Header/Header';
+import {ScrollView} from 'react-native-gesture-handler';
 
 const Chat = () => {
   return (
-    <View>
-      <Text>Chat</Text>
-    </View>
-  )
-}
+    <>
+      <Header title={'Chat'} />
+      <ScrollView>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+        <Text>Chat</Text>
+      </ScrollView>
+    </>
+  );
+};
 
-export default Chat
+export default Chat;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});
