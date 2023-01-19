@@ -6,6 +6,7 @@ import {Height, Width} from '../../constants/FontSizes';
 const appStyles = StyleSheet.create({
   flex1: {flex: 1},
   text_warning: {color: mainColor},
+  commonMargin:{marginHorizontal:10},
   es_image: {
     position: 'absolute',
     bottom: Height / 4.5,
